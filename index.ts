@@ -279,7 +279,6 @@ function ensureTypeScriptInstance(loaderOptions: LoaderOptions, loader: any): { 
 
     // Special handling for ES6 targets
     if (compilerOptions.target == 2 /* ES6 */) {
-        compilerOptions.module = 0 /* None */;
         libFileName = 'lib.es6.d.ts';
     }
     libFileName = path.join(path.dirname(require.resolve(loaderOptions.compiler)), libFileName);
